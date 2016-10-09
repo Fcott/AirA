@@ -14,8 +14,10 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-3 text-center pad_top ">
+            <%= link_to @room.user do %>
             <%= image_tag avatar_url(@room.user), class: "img-circle avatar-large mar_bottom" %>
             <p><%= @room.user.fullname %></p>
+            <% end %>
           </div>
 
           <div class="col-md-9">
@@ -136,6 +138,21 @@
     <br>
     <hr>
 
+    <!-- Reviews -->
+    <div class="row mar_bottom">
+      <div class="col-md-12">
+        <h3>Reviews <span id="average_rating"></span>(<%= @reviews.count %>) </h3>
+       <div class="container">
+        <div>
+          <%= render 'reviews/form' if @booked && !@hasReview && current_user != @room.user %>
+        </div>
+        <div>
+          <%= render 'reviews/list' %>
+        </div>
+       </div>
+      </div>
+    </div>
+
     <!-- Google Map -->
     <div class="row">
       <div class="col-md-12">
@@ -187,3 +204,11 @@
 
   </div>
 </div>
+
+<script>
+  $("#average_rating").raty({
+    path: '/assets',
+    readOnly: true,
+    score: <%= @room.average_rating %>
+  });
+</script>

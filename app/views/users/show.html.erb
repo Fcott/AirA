@@ -8,7 +8,7 @@
           <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post', class: "btn btn-primary wide" %>
         </div>
       <% end %>
-      
+
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">Verification</div>
@@ -37,9 +37,18 @@
           </div>
           <div class="panel-body">
             <h4><%= link_to room.listing_name, room %></h4>
+            <span id="average_rating_<%= room.id %>"></span>(<%= room.reviews.count %>)
           </div>
         </div>
       </div>
+
+      <script>
+        $("#average_rating_<%= room.id %>").raty({
+          path: '/assets',
+          readOnly: true,
+          score: <%= room.average_rating %>
+        });
+      </script>
 
       <% end %>
     </div>
