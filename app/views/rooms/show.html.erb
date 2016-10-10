@@ -146,7 +146,7 @@
         <div>
           <%= render 'reviews/form' if @booked && !@hasReview && current_user != @room.user %>
         </div>
-        <div>
+        <div id="reviews">
           <%= render 'reviews/list' %>
         </div>
        </div>
