@@ -147,7 +147,7 @@
           <%= render 'reviews/form' if @booked && !@hasReview && current_user != @room.user %>
         </div>
         <div id="reviews">
-          <%= render 'reviews/list' %> 
+          <%= render 'reviews/list' %>
         </div>
        </div>
       </div>
@@ -164,6 +164,7 @@
            background-color: grey;
            }
         </style>
+
         <script>
           function initMap() {
             var geo = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
