@@ -31,6 +31,8 @@ gem "binding_of_caller"
 gem 'private_pub'
 gem 'thin'
 
+gem 'ransack'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
