@@ -1,0 +1,61 @@
+1) Bootstrap
+
+    gem 'bootstrap-sass', '~> 3.3.5'
+    gem 'sass-rails', '>= 3.2'
+    References:
+    http://getbootstrap.com
+    https://github.com/twbs/bootstrap-sass
+    https://github.com/rails/sass-rails
+
+
+2) Devise
+
+gem 'devise'
+References:
+https://github.com/plataformatec/devise
+
+
+3) OmniAuth
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+References:
+https://github.com/intridea/omniauth
+https://github.com/mkdynamic/omniauth-facebook
+
+
+4) Notification
+
+gem 'toastr-rails'
+References:
+https://github.com/tylergannon/toastr-rails
+
+
+5A) Transactional Email with Mandrill
+
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+    address: 'smtp.mandrillapp.com',
+    port: 587,
+    enable_starttls_auto: true,
+    user_name: 'your_email_address@gmail.com',
+    password: 'your_mandrill_API_key',
+    authentication: 'login'
+}
+
+
+5B) Transactional Email with Sendgrid
+
+config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    enable_starttls_auto: true,
+    user_name: 'YOUR_SENDGRID_USERNAME',
+    password: 'YOUR_SENDGRID_PASSWORD',
+    authentication: 'plain'
+}
+
+References:
+mandrillapp.com
+sendgrid.com
+http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
