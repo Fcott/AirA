@@ -32,6 +32,7 @@ gem 'private_pub'
 gem 'thin'
 
 gem 'ransack'
+gem "figaro"
 
 group :development, :test do
   gem 'sqlite3'
