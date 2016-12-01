@@ -18,3 +18,4 @@
 
 # Ignore with figaro
 /config/application.yml
+config/application.yml
