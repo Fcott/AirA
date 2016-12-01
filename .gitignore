@@ -17,5 +17,7 @@
 /tmp
 
 # Ignore with figaro
-/config/application.yml
 config/application.yml
+
+config/secrets.yml
+config/private_pub.yml
