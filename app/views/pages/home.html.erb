@@ -71,22 +71,24 @@
   <p>See what people are traveling, all around world.</p>
 </div>
 
-<div class="row">
-  <% @rooms.each do |room| %>
+<% unless @rooms.length == 0 %>
+  <div class="row">
+    <% @rooms.each do |room| %>
 
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading preview">
-          <%= image_tag room.show_first_photo(:medium) if room.photos.length > 0 %>
-        </div>
-        <div class="panel-body">
-          <%= image_tag avatar_url(room.user), class: "img-circle avatar-small" %>&nbsp;
-          <%= link_to room.listing_name, room %>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading preview">
+            <%= image_tag room.show_first_photo(:medium) if room.photos.length > 0 %>
+          </div>
+          <div class="panel-body">
+            <%= image_tag avatar_url(room.user), class: "img-circle avatar-small" %>&nbsp;
+            <%= link_to room.listing_name, room %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>
 
 <script>
   $(function(){
