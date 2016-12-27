@@ -19,6 +19,6 @@
 # Ignore with figaro
 /config/application.yml
 
-/config/secrets.yml
+
 /config/private_pub.yml
 /config/database.yml
