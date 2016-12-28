@@ -22,6 +22,7 @@
 
 /config/private_pub.yml
 /config/database.yml
+/config/secret.yml
 
 # Ignore application configuration
 /config/application.yml
