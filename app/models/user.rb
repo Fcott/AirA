@@ -25,5 +25,5 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
       end
     end
-  end
+  end 
 end
